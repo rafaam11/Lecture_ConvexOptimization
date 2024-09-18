@@ -1,0 +1,53 @@
+Traveling Salesman Problem
+
+
+I. Introduction :
+**완전탐색 방법에 대한 언급, 완전탐색이 비효율적인 이유에 대해 설명.
+**따라서 우리는 이러한 문제를 해결하려고 한다.
+
+**=> 동적계획법으로 TSP를 푼 논문 찾고 간략하게 언급하기.
+- Clustering방법=> 
+- 유전 알고리즘 이용
+- Convex Hull 이용
+- ...
+
+
+II. Method
+**Miller-Tucker-Zemlin 방법에 대한 논문 찾기(O)
+**91년도 improved을 인용하고 논문에서 가져와서 쓰기
+=> MTZ에 대해서 풀어쓰고, 구체적인 수식은 section III에서 언급할 것이다.
+**트럭 움직이는 그림 인용
+
+
+III. System Model
+**전체적인 Optimization식을 작성하고 수학적으로 푼다.
+=> Obejective funcion, Constraint를 정의한다.
+**discrete로 이루어져 있으므로, non-convex문제임을 밝히고 넘어간다. 
+
+
+IV. Implementation
+
+IV-A. cvxpy
+**cvxpy에 대해서 간략하게 설명
+**시스템 흐름도 만들어서 첨부.
+1) Data setting
+2) blah blah
+3) Result
+움짤에 최소경로 나오는 부분
+
+IV-B. Validation
+**(완전 탐색 결과와 cvxpy와의 비교 결과를 제시한다.)
+- 완전탐색 그래프 + min index : 0=>2=>1 . .. > 0
+**컴퓨팅 시간 비교 그래프 그림
+
+
+
+V. Conclusion
+**
+- 이 보고서에서, 우리는 TSP를 풀기 위해 MTZ와 같은 subtour제거 방법을 통해 식을 정의하였다.
+그리고 컴퓨터 프로그래밍을 이용해서 TSP문제를 해결하였다. 
+- 결과를 검증하기 위해 완전탐색 방법을 사용한 결과와 우리의 결과를 section V에서 비교했다.
+- 결과적으로 두 결과는 일치하였고, 이것을 통해 cvxpy를 이용해 해결한 답이 맞다는 것을 알 수 있다.
+**한계
+- 우리는 도시의 개수를 7개로 실험하였는데, 만약 도시의 개수가 많아진다면 cvxpy의 결과값과 참값이 다를 수 있다. 
+
